@@ -7,12 +7,17 @@
 //
 
 #import "ViewController.h"
+#import "Cafe.h"
+#import "NetworkManager.h"
 @import MapKit;
 @import CoreLocation;
+
 
 @interface ViewController () <CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic,strong) NSArray<Cafe*> *objects;
+
 @end
 
 @implementation ViewController
@@ -30,7 +35,14 @@
 
     [self.mapView setShowsUserLocation:YES];
     
-    
+    NSLog(@"Getting cafes");
+    [NetworkManager getCafes:^(NSArray *cafes) {
+        self.objects = cafes;
+        NSLog(@"View controller got data: %@", self.objects);
+        
+    }];
+    NSLog(@"Method finished");
+
 }
 
 #pragma mark - CLLocationManagerDelegate

@@ -15,6 +15,8 @@
 		06D9E905212748F400BC60C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D9E904212748F400BC60C5 /* main.m */; };
 		06D9E90F212748F400BC60C5 /* UberBeanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D9E90E212748F400BC60C5 /* UberBeanTests.m */; };
 		06D9E91A212748F400BC60C5 /* UberBeanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D9E919212748F400BC60C5 /* UberBeanUITests.m */; };
+		06D9E9292127629100BC60C5 /* Cafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D9E9282127629100BC60C5 /* Cafe.m */; };
+		06D9E92C2127653500BC60C5 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D9E92B2127653500BC60C5 /* NetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		06D9E915212748F400BC60C5 /* UberBeanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UberBeanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D9E919212748F400BC60C5 /* UberBeanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UberBeanUITests.m; sourceTree = "<group>"; };
 		06D9E91B212748F400BC60C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06D9E9272127629100BC60C5 /* Cafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cafe.h; sourceTree = "<group>"; };
+		06D9E9282127629100BC60C5 /* Cafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cafe.m; sourceTree = "<group>"; };
+		06D9E92A2127653500BC60C5 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		06D9E92B2127653500BC60C5 /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +109,12 @@
 			children = (
 				06D9E8F5212748F300BC60C5 /* AppDelegate.h */,
 				06D9E8F6212748F300BC60C5 /* AppDelegate.m */,
+				06D9E92A2127653500BC60C5 /* NetworkManager.h */,
+				06D9E92B2127653500BC60C5 /* NetworkManager.m */,
 				06D9E8F8212748F300BC60C5 /* ViewController.h */,
 				06D9E8F9212748F300BC60C5 /* ViewController.m */,
+				06D9E9272127629100BC60C5 /* Cafe.h */,
+				06D9E9282127629100BC60C5 /* Cafe.m */,
 				06D9E8FB212748F300BC60C5 /* Main.storyboard */,
 				06D9E8FE212748F400BC60C5 /* Assets.xcassets */,
 				06D9E900212748F400BC60C5 /* LaunchScreen.storyboard */,
@@ -262,8 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06D9E9292127629100BC60C5 /* Cafe.m in Sources */,
 				06D9E8FA212748F300BC60C5 /* ViewController.m in Sources */,
 				06D9E905212748F400BC60C5 /* main.m in Sources */,
+				06D9E92C2127653500BC60C5 /* NetworkManager.m in Sources */,
 				06D9E8F7212748F300BC60C5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
