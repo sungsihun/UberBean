@@ -30,19 +30,21 @@
     [self.locationManager requestWhenInUseAuthorization];
 
     [self.locationManager requestLocation];
-
     [self.locationManager startUpdatingLocation];
 
     [self.mapView setShowsUserLocation:YES];
     
-    NSLog(@"Getting cafes");
     [NetworkManager getCafes:^(NSArray *cafes) {
         self.objects = cafes;
-        NSLog(@"View controller got data: %@", self.objects);
-        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            
+            [self.mapView showAnnotations:self.objects animated:YES];
+        }];
     }];
-    NSLog(@"Method finished");
-
+    
+    
+    
+    
 }
 
 #pragma mark - CLLocationManagerDelegate
@@ -50,7 +52,7 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     NSLog(@"Moved to %@", locations[0]);
     
-    MKCoordinateRegion currentRegion = MKCoordinateRegionMake(locations[0].coordinate, MKCoordinateSpanMake(0.1, 0.1));
+    MKCoordinateRegion currentRegion = MKCoordinateRegionMake(locations[0].coordinate, MKCoordinateSpanMake(0.02, 0.02));
     [self.mapView setRegion:currentRegion animated:YES];
     
 }
@@ -63,5 +65,7 @@
 {
     NSLog(@"Authorization status changed: %d", status);
 }
+
+
 
 @end

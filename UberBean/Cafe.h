@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+@import CoreLocation;
+@import MapKit;
 
-@interface Cafe : NSObject
-@property (nonatomic) NSString *name;
+@interface Cafe : NSObject <MKAnnotation>
+@property (nonatomic) NSString *title;
 @property (nonatomic) NSString *latitude;
 @property (nonatomic) NSString *longitude;
+@property (nonatomic,assign) CLLocationCoordinate2D coordinate;
+
 
 - (instancetype)initWithInfo:(NSDictionary*)info;
 

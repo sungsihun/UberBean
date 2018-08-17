@@ -12,9 +12,11 @@
 
 - (instancetype)initWithInfo:(NSDictionary*)info {
     if (self = [super init]) {
-        _name = info[@"name"];
+        _title = info[@"name"];
         _latitude = info[@"coordinates"][@"latitude"];
         _longitude = info[@"coordinates"][@"longitude"];
+        _coordinate = CLLocationCoordinate2DMake([_latitude doubleValue],[_longitude doubleValue]);
+        
     }
     return self;
 }
